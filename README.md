@@ -1,4 +1,4 @@
-## <p align="center">Testes com Javascript</p>
+## <p align="center">Testes com Javascript e Vitest</p>
 
 * Curso: [JavaScript Unit Testing - The Practical Guide](https://www.udemy.com/course/javascript-unit-testing-the-practical-guide)
 * Instituição: [Udemy](https://www.udemy.com)
