@@ -1,26 +1,16 @@
-import { it, expect, vi } from 'vitest';
+import { it, expect, vi, beforeAll, beforeEach } from 'vitest';
 import { promises as fs } from 'fs';
 import writeData from './io';
 
 vi.mock('fs');
-// vi.mock('fs', () => {
-//   return {
-//     fs: {
-//       writeFile: (storageData, data) => {
-//         //
-//       }
-//     }
-//   }
-// });
-vi.mock('path',() => {
-  return {
+vi.mock('path', () => (
+  {
     default: { //default because path is the default export
-      join: (...args) => {
-        return args[args.length - 1]; // returns the last argument === filename in the function
-      }
+      join: (...args) => (args[args.length - 1]) // returns the last argument === filename in the function
     }
   }
-});
+));
+
 
 it('should execute the writeFile method', () => {
   const testData = 'Teste';
